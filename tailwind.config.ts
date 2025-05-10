@@ -67,18 +67,23 @@ export default {
 				secure: {
 					DEFAULT: '#10B981', // Green
 					light: '#D1FAE5',
+					hover: '#059669',
 				},
 				warning: {
 					DEFAULT: '#F59E0B', // Amber
 					light: '#FEF3C7',
+					hover: '#D97706',
 				},
 				danger: {
 					DEFAULT: '#EF4444', // Red
 					light: '#FEE2E2',
+					hover: '#DC2626',
 				},
 				finance: {
 					DEFAULT: '#0369A1', // Dark blue
 					light: '#E0F2FE',
+					hover: '#0284C7',
+					gradient: 'linear-gradient(90deg, #0369A1 0%, #0EA5E9 100%)',
 				}
 			},
 			borderRadius: {
@@ -106,12 +111,32 @@ export default {
 				pulse: {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.5' },
+				},
+				'scale-up': {
+					'0%': { transform: 'scale(1)' },
+					'100%': { transform: 'scale(1.05)' },
+				},
+				'slide-in': {
+					'0%': { transform: 'translateY(10px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pulse-slow': 'pulse 3s infinite',
+				'scale-up': 'scale-up 0.2s ease-out',
+				'slide-in': 'slide-in 0.3s ease-out',
+			},
+			boxShadow: {
+				'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'finance-gradient': 'linear-gradient(90deg, #0369A1 0%, #0EA5E9 100%)',
+				'secure-gradient': 'linear-gradient(90deg, #10B981 0%, #34D399 100%)',
+				'warning-gradient': 'linear-gradient(90deg, #F59E0B 0%, #FBBF24 100%)',
+				'danger-gradient': 'linear-gradient(90deg, #EF4444 0%, #F87171 100%)',
 			}
 		}
 	},

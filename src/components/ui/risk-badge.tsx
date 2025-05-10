@@ -13,7 +13,7 @@ export function RiskBadge({ score, showScore = true, className = '' }: RiskBadge
   
   return (
     <span 
-      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colorClass} ${className}`}
+      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md ${colorClass} ${className}`}
     >
       {riskLevel === 'low' && "Low Risk"}
       {riskLevel === 'medium' && "Medium Risk"}
