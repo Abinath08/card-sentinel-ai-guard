@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for our fraud detection app
+				secure: {
+					DEFAULT: '#10B981', // Green
+					light: '#D1FAE5',
+				},
+				warning: {
+					DEFAULT: '#F59E0B', // Amber
+					light: '#FEF3C7',
+				},
+				danger: {
+					DEFAULT: '#EF4444', // Red
+					light: '#FEE2E2',
+				},
+				finance: {
+					DEFAULT: '#0369A1', // Dark blue
+					light: '#E0F2FE',
 				}
 			},
 			borderRadius: {
@@ -84,11 +102,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				pulse: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse 3s infinite',
 			}
 		}
 	},
